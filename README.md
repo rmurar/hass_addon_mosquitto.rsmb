@@ -1,0 +1,1 @@
+# homeassistant_addon_mosquitto.rsmb
