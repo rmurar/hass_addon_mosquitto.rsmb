@@ -1,0 +1,22 @@
+{
+    "name": "mosquitto.rsmb",
+    "version": "1.2",
+    "slug": "mosquitto_rsmb",
+    "description": "mosquitto.rsmb broker",
+    "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+    "startup": "before",
+    "boot": "auto",
+    "auto_uart": true,
+    "options": {
+        "name": "hello",
+        "year": 2020
+    },
+    "schema": {
+        "name": "str",
+        "year": "int"
+    },
+    "ports": {
+      "1885/udp": 1885,
+      "1886/tcp": 1886
+    }
+  }
