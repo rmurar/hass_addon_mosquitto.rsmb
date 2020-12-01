@@ -1,12 +1,18 @@
 {
     "name": "mosquitto.rsmb",
-    "version": "1.2",
+    "version": "3.9",
     "slug": "mosquitto_rsmb",
     "description": "mosquitto.rsmb broker",
     "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
-    "startup": "before",
+    "startup": "application",
     "boot": "auto",
     "auto_uart": true,
+    "host_network": true,
+    "privileged": ["NET_ADMIN", "SYS_ADMIN"],
+    "devices": ["/dev/net/tun:/dev/net/tun:rwm"],
+    "serial": {
+      "port": "/dev/ttyACM0"
+    },
     "options": {
         "name": "hello",
         "year": 2020
